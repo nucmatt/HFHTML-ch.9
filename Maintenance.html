@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Local Storage Maintenance</title>
+        <meta charset='utf-8'>
+        <script>
+        window.onload = function() {
+            var clearButton = document.getElementById('clear_button');
+            clearButton.onclick = clearStorage;
+        }
+// Note: localStorage.clear() will clear ALL items from localStorage that originated from the domain the clear is called from is called in.
+        function clearStorage() {
+            localStorage.clear();
+        }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type='button' id='clear_button' value='Clear localStorage'>
+        </form>
+    </body>
+</html>
